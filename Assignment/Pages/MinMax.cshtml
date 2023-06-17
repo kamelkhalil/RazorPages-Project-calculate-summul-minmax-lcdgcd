@@ -1,0 +1,43 @@
+﻿@page
+@model Assignment.Pages.MinMaxModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MinMax Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <!-- Include any additional CSS files or stylesheets -->
+</head>
+<body>
+      <div class="container">
+        <h1>MinMax Page</h1>
+        <form method="post">
+            <div class="form-group">
+                <label for="param1">Parameter 1:</label>
+                <input type="number" class="form-control" id="param1" name="Param1" required>
+            </div>
+            <div class="form-group">
+                <label for="param2">Parameter 2:</label>
+                <input type="number" class="form-control" id="param2" name="Param2" required>
+            </div>
+            <div class="form-group">
+                <label for="param3">Parameter 3:</label>
+                <input type="number" class="form-control" id="param3" name="Param3" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Calculate</button>
+        </form>
+
+        <div class="mt-4">
+            @if (ViewData["Message"] != null)
+            {
+                <p>@ViewData["Message"]</p>
+            }
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- Include any additional JavaScript files or scripts -->
+</body>
+</html>
